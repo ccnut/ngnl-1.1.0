@@ -1,0 +1,24 @@
+1543767873679	Rename package 'com.ngnl.transport.http.mina'
+1543768418417	Delete element
+1543768470022	Delete elements
+1543768483678	Rename package 'com.ngnl.transport.socket.mina'
+1543834705817	Rename method 'startServer'
+1543834710682	Rename method 'stopServer'
+1543834769783	Delete elements
+1543836566993	Move compilation unit
+1543849329324	Rename method 'setServerChannelInitializer'
+1543849596651	Rename type 'SocketServerInitializer'
+1543849618187	Delete element
+1543849635055	Delete element
+1543849709225	Delete element
+1543849735879	Delete element
+1543849772707	Delete element
+1543849839185	Delete element
+1543849902288	Rename package 'com.ngnl.transport'
+1543849923594	Move compilation unit
+1543849926634	Delete element
+1543849946026	Move compilation units
+1543849949855	Move compilation unit
+1543849953471	Delete elements
+1543850135846	Delete element
+1544196320005	Delete element

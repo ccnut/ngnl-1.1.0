@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn" name="ngnlCore" packages="">
+
+<Properties>
+    <Property name="baseDir">logs</Property>
+  </Properties>
+  
+    
+<!-- Loggers -->
+  <Loggers>
+    <Root level="debug">
+      <AppenderRef ref="console"/>
+    </Root>
+    <Logger name="errorLogger" level="error">
+      <AppenderRef ref="error"/>
+    </Logger>
+  </Loggers>
+  
+  
+<!-- Appenders -->
+  <Appenders>
+    <Console name="console" target="SYSTEM_OUT">
+      <PatternLayout pattern="%m%n"/>
+    </Console>
+    <File name="error" fileName="${baseDir}/error.log">
+      <PatternLayout>
+        <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+      </PatternLayout>
+    </File>
+  </Appenders>
+  
+</Configuration>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1543148143587_1" label="ngnl" name="ngnl">
+<item elementID="=ngnl-core" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1543342527249_2" label="ngnl-parent" name="ngnl-parent">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/ngnl-module" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/ngnl-core" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/ngnl-transport" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/ngnl-log4j" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/src" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/ngnl-templateData" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1543737462733_3" label="Java Main Sources" name="Java Main Sources">
+<item elementID="=ngnl-core/src\/main\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=ngnl-log4j/src\/main\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=ngnl-module/src\/main\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=ngnl-templateData/src\/main\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=ngnl-transport/src\/main\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1543737462736_4" label="Java Test Sources" name="Java Test Sources">
+<item elementID="=ngnl-core/src\/test\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=ngnl-log4j/src\/test\/resources" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=ngnl-log4j/src\/test\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=ngnl-module/src\/test\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=ngnl-templateData/src\/test\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=ngnl-templateData/src\/test\/resources" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=ngnl-transport/src\/test\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1543129426387_0" label="Window Working Set" name="Aggregate for window 1543129426387"/>
+<mruList name="ngnl"/>
+</workingSetManager>

@@ -1,0 +1,22 @@
+import java.util.concurrent.ConcurrentHashMap;
+
+/**
+ * @author 47
+ *
+ */
+public class TestLock {
+
+	public static void main (String[] args) throws InterruptedException {
+		new TestLock().funca();
+	}
+	
+	void funca () throws InterruptedException {
+		funcb();
+	}
+	
+	synchronized void funcb () throws InterruptedException {
+		System.out.println("test lock");
+		Thread.sleep(1);
+		funca();
+	}
+}

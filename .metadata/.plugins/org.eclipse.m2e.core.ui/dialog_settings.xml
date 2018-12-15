@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+		<list key="ciManagementUrl">
+		</list>
+		<list key="ciManagementSystem">
+		</list>
+		<list key="issueManagementSystem">
+		</list>
+		<list key="issueManagementUrl">
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.dialogs.EditDependencyDialog">
+		<item value="480" key="width"/>
+		<item value="720" key="x"/>
+		<item value="220" key="y"/>
+		<item value="450" key="height"/>
+	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.wizards.MavenProjectSelectionDialog">
+		<item value="480" key="width"/>
+		<item value="783" key="x"/>
+		<item value="202" key="y"/>
+		<item value="450" key="height"/>
+	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.dialogs.MavenRepositorySearchDialog">
+		<item value="480" key="width"/>
+		<item value="756" key="x"/>
+		<item value="195" key="y"/>
+		<item value="590" key="height"/>
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="D:\workspace\ngnl-1.1.0"/>
+			<item value="D:\workspace\ngnl-1.1.0\src"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item value="internal" key="catalog"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenModuleWizardParentPage">
+		<list key="moduleName">
+			<item value="ngnl-tcp"/>
+			<item value="ngnl-log4j"/>
+			<item value="ngnl-templateData"/>
+			<item value="cdd"/>
+			<item value="ngnl-module"/>
+			<item value="ngnl-core"/>
+			<item value="core"/>
+			<item value="Tcp"/>
+			<item value="tcp"/>
+			<item value="game"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="D:\workspace\ngnl-1.1.0\Ass"/>
+			<item value="D:\workspace\ngnl-1.1.0\src\ngnl-templateData\src\main\java\com\ngnl\templateData\annotations\TemplateDataMap.java"/>
+			<item value="D:\workspace\ngnl-1.1.0\src\ngnl-core"/>
+			<item value="D:\workspace\ngnl-1.0.0\ngnl-1.0.0\ngnl-core"/>
+			<item value="D:\workspace\ngnl-core-1.0.0\ngnl-core-1.0.0\src"/>
+			<item value="D:\workspace\ngnl-core\ngnl-core\ngnl-tcp"/>
+			<item value="D:\workspace\ngnl-core\ngnl-core\ngnl-tcp\pom.xml"/>
+			<item value="D:\workspace\ngnl-core\ngnl-core\src"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+			<item value="com.ccc.web"/>
+			<item value="com.ccc.fff"/>
+			<item value="com.ccc.Add"/>
+			<item value="com.ccc.ADD"/>
+			<item value="com.ccc.Ass"/>
+		</list>
+		<list key="groupId">
+			<item value="com.ccc"/>
+		</list>
+		<list key="artifactId">
+			<item value="web"/>
+			<item value="fff"/>
+			<item value="Add"/>
+			<item value="ADD"/>
+			<item value="Ass"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.editor.dialogs.ManageDependenciesDialog">
+		<item value="665" key="width"/>
+		<item value="628" key="x"/>
+		<item value="220" key="y"/>
+		<item value="450" key="height"/>
+	</section>
+</section>
