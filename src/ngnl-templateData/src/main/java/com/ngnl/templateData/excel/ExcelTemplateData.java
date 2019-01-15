@@ -2,7 +2,7 @@ package com.ngnl.templateData.excel;
 
 import com.ngnl.templateData.AbstractTemplateData;
 
-public class ExcelTemplateData extends AbstractTemplateData {
+public abstract class ExcelTemplateData extends AbstractTemplateData {
 
 	/**
 	 * 

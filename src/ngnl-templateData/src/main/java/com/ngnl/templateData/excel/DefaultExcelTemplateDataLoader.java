@@ -26,11 +26,10 @@ import com.ngnl.templateData.utils.POIUtils;
  * @author 47.
  *
  */
-public class DefaultExcelTemplateDataLoader implements TemplateDataLoader {
+public class DefaultExcelTemplateDataLoader extends TemplateDataLoader {
 	
 	final String metaSheetName = "metaSheet";
 
-	@Override
 	public <T extends AbstractTemplateData> Collection<T> loadTemplateData (String fileURL, Class<T> templateDataClazz){
 		Collection<T> templateDatas = new ArrayList<T>();
 		try {

@@ -14,5 +14,5 @@ public class Log4j2ManagerTest {
 			
 			LogManager.getRootLogger().debug("root logger");
 			LogManager.getLogger("errorLogger").error("errorLogger");
-		}
+		} 
 }

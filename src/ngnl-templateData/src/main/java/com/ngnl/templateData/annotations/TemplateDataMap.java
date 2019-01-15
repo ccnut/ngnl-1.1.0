@@ -14,9 +14,9 @@ public @interface TemplateDataMap {
 	Class<? extends AbstractTemplateData> templateDataClazz();
 	
 	/**
-	 * Template data file's URL string.
-	 * e.x.: "templateData/item.xml",  "templateData/item.excel" 
+	 * Template data file's URL string.<br>
+	 * e.x.: If the file URL is "templateData/item.xml",  use the file name of "item.excel".
 	 * @return Template data file's URL string.
 	 */
-	String fileURL() default "";
+	String fileName() default "";
 }

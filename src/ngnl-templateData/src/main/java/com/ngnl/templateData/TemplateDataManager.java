@@ -65,13 +65,13 @@ public class TemplateDataManager {
 	 */
 	@SuppressWarnings("unchecked")
 	public static <M extends AbstractTemplateDataMap<D>, L extends TemplateDataLoader, D extends AbstractTemplateData> 
-						 void loadTemplateData(Class<M>  templateDataMapClazz, L templateDataLoader){
+						 void loadTemplateData(Class<M>  templateDataMapClazz, L templateDataLoader)throws Exception{
 		Assert.notNull(templateDataMapClazz, "templateDataMapClazz can't be null.");
 		Assert.notNull(templateDataLoader, "templateDataLoader can't be null.");
 
 		clearAllTemplateData(templateDataMapClazz);
 		TemplateDataMap annotation = templateDataMapClazz.getAnnotation(TemplateDataMap.class);
-		addAllTemplateData(templateDataMapClazz, (Collection<D>)templateDataLoader.loadTemplateData(annotation.fileURL(), annotation.templateDataClazz()));
+		addAllTemplateData(templateDataMapClazz, (Collection<D>)templateDataLoader.loadTemplateData(annotation.fileName(), annotation.templateDataClazz()));
 	}
 	
 	/**
@@ -85,7 +85,7 @@ public class TemplateDataManager {
 		Assert.notNull(templateDataMapClazz, "templateDataMapClazz can't be null.");
 
 		 Map<Integer, D> templateDataMap = templateDatas.stream()
-				 																			.collect( Collectors.toMap(AbstractTemplateData::getId, data -> data) );
+				 										.collect( Collectors.toMap(AbstractTemplateData::getKey, data -> data) );
 		 TemplateDataManager.getTemplateDataMap(templateDataMapClazz).putAll(templateDataMap);
 	}
 	
@@ -100,7 +100,7 @@ public class TemplateDataManager {
 		Assert.notNull(templateDataMapClazz, "templateDataMapClazz can't be null.");
 		Assert.notNull(templateData, "templateData can't be null.");
 		
-		 TemplateDataManager.getTemplateDataMap(templateDataMapClazz).put(templateData.getId(), templateData);
+		 TemplateDataManager.getTemplateDataMap(templateDataMapClazz).put(templateData.getKey(), templateData);
 	}
 	
 	/**

@@ -9,9 +9,11 @@ public abstract class AbstractTemplateData implements Serializable {
 	 */
 	private static final long serialVersionUID = 7354644453365616261L;
 
-	protected int id = 0; 
+	/**
+	 * Unique identifier for a template data.
+	 * Usually use the 'id' field to represent.
+	 * @return
+	 */
+	abstract public int getKey();
 	
-	public int getId(){
-		return id;
-	}
 }

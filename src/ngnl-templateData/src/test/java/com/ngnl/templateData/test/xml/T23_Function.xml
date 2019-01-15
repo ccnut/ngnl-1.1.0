@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<RECORDS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<record uid="1">
+	<ID>101</ID> 
+	<Type>1</Type> 
+	<Value>20</Value> 
+	<Desc>體力-體力上限</Desc> 
+</record>
+<record uid="2">
+	<ID>102</ID> 
+	<Type>2</Type> 
+	<Value>100</Value> 
+	<Desc>角色强化基礎經驗值</Desc> 
+</record>
+<record uid="3">
+	<ID>103</ID> 
+	<Type>3</Type> 
+	<Value>100</Value> 
+	<Desc>裝備强化基礎經驗值</Desc> 
+</record>
+</RECORDS>
