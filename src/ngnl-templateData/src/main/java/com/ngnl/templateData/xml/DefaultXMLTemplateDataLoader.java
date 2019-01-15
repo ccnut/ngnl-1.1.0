@@ -30,7 +30,7 @@ public class DefaultXMLTemplateDataLoader extends TemplateDataLoader {
 	
 	@Override
 	public <T extends AbstractTemplateData> Collection<T> loadTemplateData(String fileName, Class<T> templateDataClazz) throws Exception{
-		URL url = Resources.getResource(getRootFile() + fileName);
+		URL url = Resources.getResource(getRootFileURL() + fileName);
 		SAXReader reader = new SAXReader();
 		Document document = reader.read(url);
 		

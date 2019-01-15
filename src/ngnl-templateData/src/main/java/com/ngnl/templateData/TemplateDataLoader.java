@@ -8,7 +8,7 @@ import java.util.Collection;
  */
 public abstract class TemplateDataLoader {
 
-	private String rootFile = "";
+	private String rootFileURL = "";
 	
 	abstract public <T extends AbstractTemplateData> Collection<T> loadTemplateData (String fileName, Class<T> templateDataClazz) throws Exception;
 	
@@ -18,8 +18,8 @@ public abstract class TemplateDataLoader {
 	 * <i>then this value is "com/rac/core/templateData/".</i><br>
 	 * default is empty string.
 	 */
-	public String getRootFile() {
-		return rootFile;
+	public String getRootFileURL() {
+		return rootFileURL;
 	}
 
 	/**
@@ -29,6 +29,6 @@ public abstract class TemplateDataLoader {
 	 * default is empty string.
 	 */
 	public void setRootURL(String rootFileURL) {
-		this.rootFile = rootFile;
+		this.rootFileURL = rootFileURL;
 	}
 }
