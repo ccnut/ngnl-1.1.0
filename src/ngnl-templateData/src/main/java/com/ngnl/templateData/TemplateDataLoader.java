@@ -28,7 +28,7 @@ public abstract class TemplateDataLoader {
 	 * <i>then this value is "com/rac/core/templateData/".</i><br>
 	 * default is empty string.
 	 */
-	public void setRootFile(String rootFile) {
+	public void setRootURL(String rootFileURL) {
 		this.rootFile = rootFile;
 	}
 }

@@ -34,7 +34,7 @@ public class TemplateDatamanagerTest {
 		TemplateDataManager.scanTemplateDataMap(reflections);
 		
 		DefaultXMLTemplateDataLoader templateDataLoader = new DefaultXMLTemplateDataLoader();
-		templateDataLoader.setRootFile("com/ngnl/templateData/test/xml/");
+		templateDataLoader.setRootURL("com/ngnl/templateData/test/xml/");
 		TemplateDataManager.loadTemplateData(T23TemplateDataMap.class, templateDataLoader);
 	}
 	
