@@ -26,7 +26,16 @@ import com.ngnl.templateData.TemplateDataLoader;
  * @author 47.
  *
  */
-public class DefaultXMLTemplateDataLoader extends TemplateDataLoader {
+public final class DefaultXMLTemplateDataLoader extends TemplateDataLoader {
+	
+	public DefaultXMLTemplateDataLoader () {
+		
+	}
+	
+	public DefaultXMLTemplateDataLoader (String rootFileURL) {
+		this.setRootURL(rootFileURL);
+	}
+	
 	
 	@Override
 	public <T extends AbstractTemplateData> Collection<T> loadTemplateData(String fileName, Class<T> templateDataClazz) throws Exception{

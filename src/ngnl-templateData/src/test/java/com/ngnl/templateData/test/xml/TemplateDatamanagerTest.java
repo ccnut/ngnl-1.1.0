@@ -1,16 +1,9 @@
 package com.ngnl.templateData.test.xml;
 
 import java.io.File;
-import java.net.URL;
-import java.util.Collection;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.reflections.Reflections;
-import org.reflections.scanners.SubTypesScanner;
-import org.reflections.scanners.TypeAnnotationsScanner;
-import org.reflections.util.ClasspathHelper;
-import org.reflections.util.ConfigurationBuilder;
 import org.slf4j.LoggerFactory;
 
 import com.ngnl.templateData.TemplateDataManager;
@@ -24,18 +17,17 @@ public class TemplateDatamanagerTest {
 	
 	@BeforeClass
 	public static void beforeClass() throws Exception{
-		Collection<URL> urls = ClasspathHelper.forPackage("com.ngnl.templateData.test");
-		Reflections reflections = new Reflections(new ConfigurationBuilder()
-						                .setUrls(urls)
-						                .setScanners(new SubTypesScanner(false),
-						                			 new TypeAnnotationsScanner()));
+
 		LoggerFactory.getLogger(TemplateDatamanagerTest.class).info("Project Root: {}", new File("").getAbsolutePath());
 		
-		TemplateDataManager.scanTemplateDataMap(reflections);
+		//1.扫描模板注解
+		TemplateDataManager.scanTempalteDataMapBy("com.ngnl.templateData.test.xml");
+		//2.创建xml加载映射loader
+		DefaultXMLTemplateDataLoader templateDataLoader = new DefaultXMLTemplateDataLoader("com/ngnl/templateData/test/xml/");
 		
-		DefaultXMLTemplateDataLoader templateDataLoader = new DefaultXMLTemplateDataLoader();
-		templateDataLoader.setRootURL("com/ngnl/templateData/test/xml/");
-		TemplateDataManager.loadTemplateData(T23TemplateDataMap.class, templateDataLoader);
+		TemplateDataManager.loadAllScannedTemplateDatas(templateDataLoader);
+//		//3.重新加载指定xml
+//		TemplateDataManager.loadTemplateData(T23TemplateDataMap.class, templateDataLoader);
 	}
 	
 	@Test

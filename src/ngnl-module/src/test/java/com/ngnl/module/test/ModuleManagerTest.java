@@ -16,7 +16,6 @@ import org.reflections.util.ClasspathHelper;
 import org.reflections.util.ConfigurationBuilder;
 import org.slf4j.LoggerFactory;
 
-import com.ngnl.core.annotations.Nullable;
 import com.ngnl.module.BaseModule;
 import com.ngnl.module.ModuleManager;
 import com.ngnl.module.annotations.Module;
@@ -41,11 +40,15 @@ public class ModuleManagerTest implements BaseModule {
 		ModuleManager.scanModule(reflections);
 		
 		ModuleManagerTest testModule = ModuleManager.getModule(ModuleManagerTest.class);
-		LoggerFactory.getLogger(ModuleManagerTest.class).debug("scanned test module: {}", testModule.toString());
+		LoggerFactory.getLogger(ModuleManagerTest.class).info("scanned test module: {}", testModule.toString());
 	}
-	
-	@Nullable
-	public static String aaa() {
-		return "";
+
+	@Test
+	public void testScanModulePackage () {
+		String packageStr = "com.ngnl.module.test";
+		ModuleManager.scanModule(packageStr);
+
+		ModuleManagerTest testModule = ModuleManager.getModule(ModuleManagerTest.class);
+		LoggerFactory.getLogger(ModuleManagerTest.class).info("scanned test module: {}", testModule.toString());
 	}
 }

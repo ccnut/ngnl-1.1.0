@@ -29,6 +29,14 @@ import com.ngnl.templateData.utils.POIUtils;
 public class DefaultExcelTemplateDataLoader extends TemplateDataLoader {
 	
 	final String metaSheetName = "metaSheet";
+	
+	public DefaultExcelTemplateDataLoader() {
+		
+	}
+	
+	public DefaultExcelTemplateDataLoader(String rootFileURL) {
+		this.setRootURL(rootFileURL);
+	}
 
 	public <T extends AbstractTemplateData> Collection<T> loadTemplateData (String fileURL, Class<T> templateDataClazz){
 		Collection<T> templateDatas = new ArrayList<T>();

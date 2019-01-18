@@ -11,18 +11,14 @@ import com.ngnl.core.utils.Assert;
  */
 public class MyBatisConnector {
 	
-	MybatisConnectBean connectBean;
+	final MybatisConnectBean connectBean;
 
-	public MyBatisConnector () {
-	}
-	
 	public MyBatisConnector (MybatisConnectBean connectBean) {
 		this.connectBean = connectBean;
 	}
 	
 	/**
-	 * Get a registered <i>Mapper</i>.<br>
-	 * This method should always be surrended by try-finally block.To ensure that
+	 * Get a registered <i>Mapper</i>.<br>	 * This method should always be surrended by try-finally block.To ensure that
 	 * {@code SqlSession} is always be closed.<br>
 	 * try {<br>
 	 * Mapper mapper = getMapper(mapperClazz);<br>
@@ -30,7 +26,7 @@ public class MyBatisConnector {
 	 * }finally {<br>
 	 * sqlSession.close();<br>
 	 * }<br>
-	 * 
+
 	 * @param clazz
 	 * @return
 	 */
@@ -51,7 +47,4 @@ public class MyBatisConnector {
 		return this.connectBean.getSqlSessionFactory();
 	}
 	
-	public void setConnectBean(MybatisConnectBean connectBean) {
-		this.connectBean = connectBean;
-	}
 }

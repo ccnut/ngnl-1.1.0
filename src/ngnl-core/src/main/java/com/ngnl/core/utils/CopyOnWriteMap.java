@@ -85,6 +85,9 @@ public class CopyOnWriteMap<K, V> implements Map<K, V>, Cloneable {
 
 	@Override
 	public void clear() {
+		if(this.internalMap != null && this.internalMap.size() == 0)
+			return;
+		
 		this.internalMap = new HashMap<>();
 	}
 }
