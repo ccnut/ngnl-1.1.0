@@ -1,7 +1,5 @@
 package com.ngnl.templateData.test.xml;
 
-import java.io.File;
-
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.slf4j.LoggerFactory;
@@ -18,8 +16,6 @@ public class TemplateDatamanagerTest {
 	@BeforeClass
 	public static void beforeClass() throws Exception{
 
-		LoggerFactory.getLogger(TemplateDatamanagerTest.class).info("Project Root: {}", new File("").getAbsolutePath());
-		
 		//1.扫描模板注解
 		TemplateDataManager.scanTempalteDataMapBy("com.ngnl.templateData.test.xml");
 		//2.创建xml加载映射loader

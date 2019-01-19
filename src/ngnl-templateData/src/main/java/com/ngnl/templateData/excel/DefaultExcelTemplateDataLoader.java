@@ -16,6 +16,7 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 
+import com.google.common.io.Resources;
 import com.ngnl.core.annotations.Nullable;
 import com.ngnl.core.utils.Assert;
 import com.ngnl.templateData.AbstractTemplateData;
@@ -38,11 +39,11 @@ public class DefaultExcelTemplateDataLoader extends TemplateDataLoader {
 		this.setRootURL(rootFileURL);
 	}
 
-	public <T extends AbstractTemplateData> Collection<T> loadTemplateData (String fileURL, Class<T> templateDataClazz){
+	public <T extends AbstractTemplateData> Collection<T> loadTemplateData (String fileName, Class<T> templateDataClazz){
 		Collection<T> templateDatas = new ArrayList<T>();
 		try {
-			
-			Workbook workBook = WorkbookFactory.create(new FileInputStream(fileURL));
+			String url = Resources.getResource(getRootFileURL() + fileName).getPath();
+			Workbook workBook = WorkbookFactory.create(new FileInputStream(url));
 			Collection<T> loadedTemplateDatas = (Collection<T>) this.doLoadTemplateData(workBook, templateDataClazz);
 			templateDatas.addAll(loadedTemplateDatas);
 		} catch (EncryptedDocumentException e) {

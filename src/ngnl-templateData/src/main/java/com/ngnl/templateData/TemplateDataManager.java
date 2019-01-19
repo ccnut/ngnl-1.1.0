@@ -2,6 +2,7 @@ package com.ngnl.templateData;
 
 import java.io.File;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -28,12 +29,21 @@ public class TemplateDataManager {
 	
 	
 	/**
+	 * note: No matter what package path you pass in, 'Reflections' will always return the root-url to your root directory.
+	 * such as, If you call it like this {@code ClasspathHelper.forPackage("com.ngnl.templateData.test.xml")} it returns [file:/D:/workspace/ngnl-1.1.0/src/ngnl-templateData/target/test-classes/], 
+	 * not that what you except [file:/D:/workspace/ngnl-1.1.0/src/ngnl-templateData/target/test-classes/com/ngnl/templateData/test/xml].
 	 * @param packageName
 	 */
-	public static void scanTempalteDataMapBy (String packageName) {
-		Collection<URL> urls = ClasspathHelper.forPackage(packageName);
+	public static void scanTempalteDataMapBy (String packageName) throws Exception{
+		Collection<URL> urls = ClasspathHelper.forPackage(packageName.replace(".", "\\."));
+		Collection<URL> fullUrls = new ArrayList<>();
+		for (URL url : urls) {
+			String fullURL = url.toExternalForm() + packageName.replace(".", "/");
+			fullUrls.add(new URL(fullURL));
+		}
+		
 		Reflections reflections = new Reflections(new ConfigurationBuilder()
-						                .setUrls(urls)
+						                .setUrls(fullUrls)
 						                .setScanners(new SubTypesScanner(false),
 						                			 new TypeAnnotationsScanner()));
 		LoggerFactory.getLogger(TemplateDatamanagerTest.class).info("Project Root: {}", new File("").getAbsolutePath());
