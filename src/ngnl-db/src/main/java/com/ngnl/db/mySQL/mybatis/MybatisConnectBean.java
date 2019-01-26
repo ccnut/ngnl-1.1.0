@@ -5,7 +5,6 @@ import java.io.InputStream;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-import com.ngnl.core.annotations.NonNull;
 import com.ngnl.core.utils.Assert;
 import com.ngnl.db.ConnectBean;
 
@@ -17,10 +16,11 @@ public class MybatisConnectBean extends ConnectBean {
 
 	SqlSessionFactory sqlSessionFactory = null;
 	
-	public MybatisConnectBean (@NonNull SqlSessionFactory sqlSessionFactory) {
-		this.sqlSessionFactory = sqlSessionFactory;
-	}
 	
+	public static MybatisConnectBeanBuilder newBuilder () {
+		return new MybatisConnectBean.MybatisConnectBeanBuilder();
+	}
+
 	/**
 	 * @return the sqlSessionFactory
 	 */
@@ -28,23 +28,20 @@ public class MybatisConnectBean extends ConnectBean {
 		Assert.notNull(sqlSessionFactory, "sqlSessionFactory has not initialized.");
 		return sqlSessionFactory;
 	}
-
 	
 	
 	/**
 	 * @author 47
-	 * MySQLConnectDBBean's builder
+	 * MybatisConnectBeanBuilder builder
 	 */
-	public static class Builder {
+	public static class MybatisConnectBeanBuilder {
 		
-		/**
-		 * TODO:
-		 * use code style to create a {@code SqlSessionFactory}.
-		 * @return
-		 */
-		public SqlSessionFactory build () {
-			
-			return null;
+		SqlSessionFactory sqlSessionFactory = null;
+		
+		public MybatisConnectBean build () {
+			MybatisConnectBean bean = new MybatisConnectBean();
+			bean.sqlSessionFactory = sqlSessionFactory;
+			return bean;
 		}
 		
 		/**
@@ -52,11 +49,12 @@ public class MybatisConnectBean extends ConnectBean {
 		 * Use example:<br>
 		 * <i>String resource = "org/mybatis/example/mybatis-config.xml";</i><br>
 		 * <i>InputStream inputStream = Resources.getResourceAsStream(resource);</i><br>
-		 * <i>new Builder().build(inputStream);</i>
+		 * <i>loadXML(inputStream);</i>
 		 * @param inputStream
 		 */
-		public static SqlSessionFactory build (InputStream inputStream) {
-			return new SqlSessionFactoryBuilder().build(inputStream);
+		public MybatisConnectBeanBuilder loadXML (InputStream xmlInputStream) {
+			this.sqlSessionFactory = new SqlSessionFactoryBuilder().build(xmlInputStream);
+			return this;
 		}
 	}
 }

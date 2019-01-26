@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC 
+   "-//mybatis.org//DTD Config 3.0//EN"
+   "http://mybatis.org/dtd/mybatis-3-config.dtd">
+   
+ <configuration>
+ 
+ 	<!-- Include *.properties files.-->
+ 	<properties resource="com/ngnl/db/test/mybatis/config/dbConfig.properties">
+ 		<property name="db.mybatis.driver" value="com.mysql.jdbc.Driver"/>
+ 	</properties>
+ 	
+<!--  	<typeAliases>
+ 		<typeAlias alias="driver" type=""/>
+ 	</typeAliases> -->
+ 
+	<environments  default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+	         <dataSource type="POOLED">
+	             <property name="driver" value="${db.mybatis.driver}" />
+	             <property name="url" value="${db.mybatis.url}" />
+	             <property name="username" value="${db.mybatis.username}" />
+	             <property name="password" value="${db.mybatis.password}" />
+	         </dataSource>
+		</environment>
+	</environments>
+	
+	<mappers>
+		<!-- <mapper class="com.ngnl.db.test.mybatis.UserDao"/> -->
+		<mapper resource="com/ngnl/db/test/mybatis/mappers/UserMapper.xml"/>
+	</mappers>
+	
+	
+ </configuration> 
