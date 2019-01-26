@@ -39,13 +39,14 @@ public class SocketServer {
 					 .handler(new LoggingHandler()) //bind to boss group
 					 .childHandler(channelInitializer); //bind to worker group
 			
-			ChannelFuture channelFuture = bootstrap.bind(8400).sync();
+			ChannelFuture channelFuture = bootstrap.bind(port).sync();
 			channelFuture.addListener(future ->{
 				if (future.isSuccess())
 					LoggerFactory.getLogger(HttpServer.class).info("Netty socket server start at port:{}", port);
 				else
 					LoggerFactory.getLogger(HttpServer.class).error("Netty socket server start failed!");
 			});
+			//执行这句会阻塞线程 直到服务端断开连接
 			channelFuture.channel().closeFuture().sync();
 		} finally {
 			bossGroup.shutdownGracefully();

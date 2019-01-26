@@ -10,22 +10,23 @@ import org.apache.poi.ss.usermodel.Row;
 
 public class POIUtils {
 	
-	public static Object getValue (Cell cell, Class<?> targetType){
-		Object targetTypeValue = null;
+	@SuppressWarnings("unchecked")
+	public static <T> T getValue (Cell cell, Class<T> targetType){
+		T targetTypeValue = null;
 		if ("short".equals(targetType.getName())){
-			targetTypeValue =  getShort(cell);
+			targetTypeValue =  (T)Short.valueOf(getShort(cell));
     	}else if ("int".equals(targetType.getName())){
-    		targetTypeValue =  getInt(cell);
+    		targetTypeValue =  (T)Integer.valueOf(getInt(cell));
     	}else if ("float".equals(targetType.getName())){
-    		targetTypeValue =  getFloat(cell);
+    		targetTypeValue =  (T)Float.valueOf(getFloat(cell));
     	}else if ("long".equals(targetType.getName())){
-    		targetTypeValue =  getLong(cell);
+    		targetTypeValue =  (T)Long.valueOf(getLong(cell));
     	}else if ("double".equals(targetType.getName())){
-    		targetTypeValue =  getDouble(cell);
+    		targetTypeValue =  (T)Double.valueOf(getDouble(cell));
     	}else if ("boolean".equals(targetType.getName())){
-    		targetTypeValue =  getBoolean(cell);
+    		targetTypeValue =  (T)getBoolean(cell);
     	}else if ("java.lang.String".equals(targetType.getName())){
-    		targetTypeValue =  getString(cell);
+    		targetTypeValue =  (T)getString(cell);
     	}else{
     		throw new IllegalArgumentException("Unknow cell type: " + targetType.getName());
     	}

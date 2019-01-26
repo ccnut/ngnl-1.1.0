@@ -45,7 +45,7 @@ public class SocketClient{
 			});
 			
 			this.channel = channelFuture.channel();
-			//执行这句会阻塞线程 知道服务端断开连接
+			//执行这句会阻塞线程 直到服务端断开连接
 			channelFuture.channel().closeFuture().sync();
 		} finally {
 			eventLoopGroup.shutdownGracefully();
