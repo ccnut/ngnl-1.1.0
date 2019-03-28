@@ -1,4 +1,4 @@
-package com.ngnl.module.test;
+package com.ngnl.test.module;
 
 import java.net.URL;
 import java.util.Collection;
@@ -45,7 +45,7 @@ public class ModuleManagerTest implements BaseModule {
 
 	@Test
 	public void testScanModulePackage () {
-		String packageStr = "com.ngnl.module.test";
+		String packageStr = "com.ngnl.test.module";
 		ModuleManager.scanModule(packageStr);
 
 		ModuleManagerTest testModule = ModuleManager.getModule(ModuleManagerTest.class);
